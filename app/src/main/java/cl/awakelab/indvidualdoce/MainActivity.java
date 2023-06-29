@@ -18,12 +18,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnFood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), SecondActivity.class);
-                startActivity(intent);
-            }
+        binding.btnFood.setOnClickListener(v -> {
+            Intent intent = new Intent(getBaseContext(), SecondActivity.class);
+            startActivity(intent);
         });
     }
 }
